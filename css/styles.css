@@ -137,6 +137,14 @@ p {
   fill: var(--accent);
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* блок герой */
 .hero {
   padding-top: 200px;
@@ -210,6 +218,7 @@ p {
   min-height: 581px;
   min-width: 528px;
   background-color: var(--white);
+  z-index: 2;
 }
 .close-btn {
   position: absolute;
@@ -220,6 +229,9 @@ p {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--white);
+}
+.close-btn svg {
+  margin: 0;
 }
 
 /* блок особенности */
@@ -601,12 +613,29 @@ footer {
   letter-spacing: 0.03em;
   color: var(--gray-text);
 }
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.projects-thumb {
+  position: relative;
+}
+.subitem {
+  position: absolute;
+  padding: 63px 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  
+  color: var(--white);
+  background-color: var(--accent);
+}
+.projects-item:hover .subitem,
+ .projects-item:focus .subitem {
+  display: block;
 }
 .projects-item:hover,
 .projects-item:focus {
